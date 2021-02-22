@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="lat" translatable="false">59.337239</string>
+    <string name="log" translatable="false">18.062381</string>
+    <string name="current_weather_status_icon">Current Weather Status Icon</string>
+    <string name="feels_like">Feels Like:%1$s°</string>
+    <string name="low">Low:%1$s°</string>
+    <string name="high">High:%1$s°</string>
+    <string name="temp" translatable="false">%1$s°</string>
+</resources>

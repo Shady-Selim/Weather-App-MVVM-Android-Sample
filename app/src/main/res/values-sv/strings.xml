@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Väderapp</string>
+    <string name="current_weather_status_icon">Nuvarande väderstatusikon</string>
+    <string name="feels_like">Känns som:%1$s°</string>
+    <string name="low">Låg:%1$s°</string>
+    <string name="high">Hög:%1$s°</string>
+</resources>
