@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             tv_daily_summary.text = it.daily.summary
             tv_current_summary.text = it.currently.summary
             tv_apparentTemperature.text = getString(R.string.feels_like, it.currently.apparentTemperature.roundToInt().toString())
-            tv_temperatureHigh.text = getString(R.string.high, ceil(it.daily.data[0].temperatureHigh).toString())
-            tv_temperatureLow.text = getString(R.string.low, floor(it.daily.data[0].temperatureLow).toString())
+            tv_temperatureHigh.text = getString(R.string.high, ceil(it.daily.data[0].temperatureHigh).toInt().toString())
+            tv_temperatureLow.text = getString(R.string.low, floor(it.daily.data[0].temperatureLow).toInt().toString())
             iv_icon.load("https://darksky.net/images/weather-icons/${it.currently.icon}.png")
         })
     }
