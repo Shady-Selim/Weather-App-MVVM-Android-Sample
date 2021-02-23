@@ -2,9 +2,11 @@ package com.shadyselim.weatherapp.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.shadyselim.weatherapp.R
+import com.shadyselim.weatherapp.data.model.Weather
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.ceil
 import kotlin.math.floor
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainViewModel.getWeather("${getString(R.string.lat)},${getString(R.string.log)}").observe(this,{
+        mainViewModel.getWeather("${getString(R.string.lat)},${getString(R.string.log)}").observe(this, Observer<Weather> {
             tv_timezone.text = it.timezone
             tv_temperature.text = getString(R.string.temp, it.currently.temperature.roundToInt().toString())
             tv_daily_summary.text = it.daily.summary
