@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainViewModel.getWeather("${getString(R.string.lat)},${getString(R.string.longe)}").observe(this,{
+        mainViewModel.getWeather("${getString(R.string.lat)},${getString(R.string.log)}").observe(this,{
             tv_timezone.text = it.timezone
             tv_temperature.text = getString(R.string.temp, it.currently.temperature.roundToInt().toString())
             tv_daily_summary.text = it.daily.summary
