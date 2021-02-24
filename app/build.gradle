@@ -28,7 +28,7 @@ android {
         }
     }
 
-    buildTypes.each {
+    buildTypes.each { // And your string in "local.properties" file, e.g.: WeatherApiKey="xxxxxxxx"
         it.buildConfigField 'String', 'Weather_Api_Key', WeatherApiKey
     }
 
